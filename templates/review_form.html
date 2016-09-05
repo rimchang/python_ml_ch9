@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+	
+	{% block content %}
+      <div class="col-md-12">
+            <form class="form-horizontal" action="{% url 'review' %}" method="post">
+
+              <div class="form-group">
+                {% csrf_token %}
+                <h1>Please enter your movie review</h1>
+                
+                {{form.review}}
+                {{form.review.errors}}
+                
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit review</button>
+
+              </div>
+            </form>
+      </div>
+    {% endblock %}

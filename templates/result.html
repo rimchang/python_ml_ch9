@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+	
+	{% block content %}
+      <div class="col-md-12">
+        <h1>your moview review:</h1>
+        
+        <p>{{ review }}</p>
+        
+        <h1>Prediction :</h1>
+        
+        <p>this mivew review is <strong>{{ y }}</strong> ( prob: {{ prob }} )</p>
+
+
+          <form class="form-horizontal" action="{% url 'feedback' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+              
+              <input type=submit value='Correct' name='feedback_button'>
+              <input type=submit value='Incorrect' name='feedback_button'>
+              <input type=hidden value='{{ y }}' name='prediction'>
+              <input type=hidden value='{{ review }}' name='review'>
+              
+            </div>
+          </form>
+            <a href={%url 'review'  %}><button type="submit" class="btn btn-primary">Submit another review</button></a>
+
+
+    </div>
+
+{% endblock %}
+    
