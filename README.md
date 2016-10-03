@@ -1,4 +1,3 @@
-
 ## Embedding a Machine Learning Model into a Web Application
 
 [pythonmllink]:https://www.amazon.com/Python-Machine-Learning-Sebastian-Raschka/dp/1783555130
@@ -28,8 +27,8 @@ Scikit-learn의 partial-fit 을 사용해 db상에 저장될 때마다 실시간
 
       웹프레임워크
 
+# 최종결과
 
+![Alt text](./picture.png)
 
 ## [튜토리얼](./python_ml_ch9.ipynb)
-
-
