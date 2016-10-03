@@ -36,7 +36,7 @@ db = os.path.join(os.path.dirname(os.path.dirname(cur_dir)),'db.sqlite3')
 print(db)
 
 
-#clf = update_model(db_path=db, model=clf, batch_size=10000)
+clf = update_model(db_path=db, model=clf, batch_size=10000)
 
 # Uncomment the following lines if you are sure that
 # you want to update your classifier.pkl file
